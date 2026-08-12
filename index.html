@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DriveMe Capital — інвестиції в діючий таксі-бізнес</title>
+<meta name="description" content="Інвестуйте у діючий таксі-парк DriveMe (партнер Uklon з 2018). Фіксований дохід у доларі 10–15% або 50/50 від прибутку. 350+ авто, виплати щомісяця.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --bg2:#0f0f11; --panel:#141416; --panel2:#1a1a1d; --line:#26262b;
+  --orange:#f7931e; --orange2:#ffb454; --white:#f4f2ee; --mut:#9a9aa2; --body:#c9c7c2;
+  --sora:'Sora',system-ui,sans-serif; --inter:'Inter',system-ui,sans-serif;
+  --wrap:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--inter);background:var(--bg);color:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--sora);color:var(--white);line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.orange{color:var(--orange)}
+.eyebrow{font-family:var(--sora);text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--orange)}
+section{padding:96px 0;position:relative}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(28px,4vw,44px);font-weight:800;margin:14px 0}
+.sec-head p{font-size:17px;color:var(--mut)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,11,.72);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:40px;height:40px;border-radius:10px;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;font-family:var(--sora);font-weight:800;font-size:18px;background:#000}
+.mark .d{color:#fff}.mark .m{color:var(--orange)}
+.brand .txt{display:flex;flex-direction:column;line-height:1}
+.brand .cap{font-family:var(--sora);font-size:9px;letter-spacing:.34em;color:var(--mut);font-weight:700;margin-bottom:3px}
+.brand .nm{font-family:var(--sora);font-size:16px;font-weight:700;color:var(--white)}
+.brand .nm b{color:var(--orange)}
+.navlinks{display:flex;gap:30px;align-items:center}
+.navlinks a{font-size:14.5px;color:var(--body);transition:color .2s}
+.navlinks a:hover{color:var(--white)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#000;font-family:var(--sora);font-weight:700;font-size:14.5px;padding:12px 22px;border-radius:100px;transition:transform .15s,box-shadow .2s;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(247,147,30,.6)}
+.btn.ghost{background:transparent;color:var(--white);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--orange);box-shadow:none}
+.navtoggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:70px;overflow:hidden}
+.hero video,.hero .heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(10,10,11,.96) 0%,rgba(10,10,11,.82) 45%,rgba(10,10,11,.45) 100%),linear-gradient(0deg,var(--bg) 2%,transparent 30%)}
+.promo{display:inline-flex;align-items:center;gap:10px;background:rgba(247,147,30,.12);border:1px solid rgba(247,147,30,.5);color:var(--orange2);padding:8px 16px;border-radius:100px;font-size:13.5px;font-weight:600;margin-bottom:26px}
+.promo .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(247,147,30,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(247,147,30,.55)}70%{box-shadow:0 0 0 10px rgba(247,147,30,0)}100%{box-shadow:0 0 0 0 rgba(247,147,30,0)}}
+.hero h1{font-size:clamp(38px,6.4vw,74px);font-weight:800;max-width:16ch;margin-bottom:22px}
+.hero p.lead{font-size:clamp(16px,2vw,20px);color:var(--body);max-width:56ch;margin-bottom:34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.chips{display:flex;gap:14px;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px 20px}
+.chip .n{font-family:var(--sora);font-size:24px;font-weight:800;color:var(--white)}
+.chip .l{font-size:12.5px;color:var(--mut)}
+
+/* TRUST STRIP */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-top:34px;padding-bottom:34px}
+.strip .it{display:flex;flex-direction:column}
+.strip .it .n{font-family:var(--sora);font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--orange)}
+.strip .it .l{font-size:13.5px;color:var(--mut)}
+
+/* TIERS */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tier{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:32px 28px;position:relative;transition:transform .2s,border-color .2s}
+.tier:hover{transform:translateY(-4px);border-color:#3a3a40}
+.tier.hot{border:1.5px solid var(--orange);background:linear-gradient(180deg,rgba(247,147,30,.07),var(--panel))}
+.tier .range{font-size:14px;color:var(--mut);font-family:var(--sora);font-weight:600}
+.tier .rate{font-family:var(--sora);font-size:64px;font-weight:800;color:var(--white);line-height:1;margin:10px 0 2px}
+.tier .rate small{font-size:20px;color:var(--mut)}
+.tier .promo2{display:inline-block;margin-top:10px;background:rgba(247,147,30,.14);color:var(--orange2);font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:8px}
+.tier ul{list-style:none;margin-top:18px}
+.tier li{font-size:14px;padding:7px 0 7px 24px;position:relative;border-top:1px solid var(--line)}
+.tier li:before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:700}
+.split{margin-top:20px;background:linear-gradient(120deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between}
+.split .big{font-family:var(--sora);font-size:52px;font-weight:800;color:var(--orange)}
+.split .txt{flex:1;min-width:240px}
+.split h3{font-size:22px;margin-bottom:8px}
+.note{font-size:13px;color:var(--mut);margin-top:22px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 24px}
+.step .no{font-family:var(--sora);font-size:15px;font-weight:800;color:#000;background:var(--orange);width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step h4{font-size:17px;margin-bottom:8px}
+.step p{font-size:14px;color:var(--mut)}
+
+/* WHY */
+.why{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.why ul{list-style:none}
+.why li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.why li:last-child{border:none}
+.why li .ic{color:var(--orange);font-weight:800;flex:none}
+.why li b{color:var(--white)}
+.whyimg{border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5}
+.whyimg img{width:100%;height:100%;object-fit:cover}
+
+/* GALLERY */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:14px}
+.gal figure{overflow:hidden;border-radius:16px;border:1px solid var(--line);position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.06)}
+.gal .big{grid-column:span 2;grid-row:span 2}
+.gal .wide{grid-column:span 2}
+
+/* TEAM */
+.team{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.member{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.member .ph{aspect-ratio:16/12;background:linear-gradient(160deg,#1c1811,#0b0a09);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.member .ph img{width:100%;height:100%;object-fit:cover}
+.member .ph .ph-ph{font-family:var(--sora);font-size:64px;font-weight:800;color:#2a241b}
+.member .bd{padding:26px 28px}
+.member h3{font-size:22px}
+.member .role{color:var(--orange);font-size:14px;font-family:var(--sora);font-weight:600;margin:2px 0 12px}
+.member p{font-size:14.5px;color:var(--mut);margin-bottom:16px}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.socials a{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--white);background:var(--panel2);border:1px solid var(--line);padding:8px 14px;border-radius:100px;transition:border-color .2s}
+.socials a:hover{border-color:var(--orange)}
+
+/* PROOF */
+.proof{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:44px}
+.proof-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
+.proof-big{font-family:var(--sora);font-size:clamp(40px,7vw,72px);font-weight:800;color:var(--orange);line-height:1}
+.paytable{width:100%;border-collapse:collapse}
+.paytable td{padding:14px 6px;border-top:1px solid var(--line);font-size:15px}
+.paytable td:last-child{text-align:right;font-family:var(--sora);font-weight:700;color:var(--white);font-size:18px}
+
+/* CTA */
+.cta-band{background:linear-gradient(120deg,rgba(247,147,30,.14),var(--panel));border:1px solid rgba(247,147,30,.4);border-radius:24px;padding:56px;text-align:center}
+.cta-band h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:14px}
+.cta-band p{color:var(--body);max-width:52ch;margin:0 auto 28px}
+.cta-band .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.foot .dis{font-size:12px;color:#6c6c74;max-width:60ch}
+
+@media(max-width:900px){
+  .why{grid-template-columns:1fr}.whyimg{aspect-ratio:16/10}
+  .tiers{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}
+  .navlinks{display:none}.navtoggle{display:block}
+}
+@media(max-width:560px){.steps{grid-template-columns:1fr}.gal .big{grid-column:span 2;grid-row:span 1}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap navin">
+    <a href="#top" class="brand">
+      <span class="mark"><span class="d">D</span><span class="m">M</span></span>
+      <span class="txt"><span class="cap">CAPITAL</span><span class="nm">Drive<b>Me</b></span></span>
+    </a>
+    <div class="navlinks">
+      <a href="#offer">Пропозиція</a>
+      <a href="#how">Як працює</a>
+      <a href="#fleet">Автопарк</a>
+      <a href="#team">Команда</a>
+      <a href="#contact" class="btn">Стати інвестором</a>
+    </div>
+    <button class="navtoggle" onclick="document.getElementById('contact').scrollIntoView()">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <video autoplay muted loop playsinline poster="img/img_2966.jpg" class="herovid">
+    <source src="img/driveme.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <div class="promo"><span class="dot"></span> Акція: залишилось <b style="color:#fff;margin:0 3px">8 місць</b> для нових інвесторів — <b style="color:#fff;margin-left:3px">+1% до ставки</b></div>
+    <h1>Ваш капітал у <span class="orange">діючому</span> таксі-бізнесі</h1>
+    <p class="lead">DriveMe — офіційний партнер Uklon з 2018 року. Фіксований дохід у доларі або участь у прибутку 50/50. Авто, ремонт і всі ризики — на нас. Виплати щомісяця.</p>
+    <div class="cta">
+      <a href="#offer" class="btn">Дивитися умови</a>
+      <a href="#fleet" class="btn ghost">Наш автопарк</a>
+    </div>
+    <div class="chips">
+      <div class="chip"><div class="n">350+</div><div class="l">авто в парку</div></div>
+      <div class="chip"><div class="n">1,77 млн ₴</div><div class="l">виплачено за 10 міс</div></div>
+      <div class="chip"><div class="n">з 2018</div><div class="l">партнер Uklon</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="it"><span class="n">200 000+</span><span class="l">поїздок на місяць</span></div>
+    <div class="it"><span class="n">600+</span><span class="l">водіїв</span></div>
+    <div class="it"><span class="n">10 міс</span><span class="l">виплат без затримок</span></div>
+    <div class="it"><span class="n">9</span><span class="l">активних інвесторів</span></div>
+    <div class="it"><span class="n">4 роки</span><span class="l">жодного втраченого авто</span></div>
+  </div>
+</div>
+
+<!-- OFFER -->
+<section id="offer">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Пропозиція</div>
+      <h2>Дохід у доларі — оберіть під себе</h2>
+      <p>Ставка залежить від суми інвестиції. Дохід нараховується у доларі, виплата — в гривні за поточним курсом.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="range">Інвестиції до $15 000</div>
+        <div class="rate">10<small>% річних</small></div>
+        <div class="promo2">🔥 з акцією — 11%</div>
+        <ul><li>Виплата щомісяця</li><li>Ризик недобору — на компанії</li></ul>
+      </div>
+      <div class="tier hot">
+        <div class="range">Інвестиції $15 000 – 75 000</div>
+        <div class="rate">13<small>% річних</small></div>
+        <div class="promo2">🔥 з акцією — 14%</div>
+        <ul><li>Виплата щомісяця</li><li>Ремонт і обслуговування — на нас</li><li>Найпопулярніший формат</li></ul>
+      </div>
+      <div class="tier">
+        <div class="range">Інвестиції від $75 000</div>
+        <div class="rate">14<small>% річних</small></div>
+        <div class="promo2">🔥 з акцією — 15%</div>
+        <ul><li>Виплата щомісяця</li><li>Персональні умови виходу</li></ul>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="big">50/50</div>
+      <div class="txt">
+        <h3>Участь у прибутку — від 3 авто</h3>
+        <p style="color:var(--mut);font-size:14.5px">Замість фіксованої ставки — ділимо чистий прибуток авто навпіл. Вище потенційно, але змінно. Орієнтовно 15–26% річних на вкладений капітал.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="font-family:var(--sora);font-weight:800;font-size:26px;color:var(--orange2)">55/45</div>
+        <div style="font-size:12.5px;color:var(--mut);max-width:150px">🔥 Акція: залишилось 8 місць — розподіл на користь інвестора</div>
+      </div>
+    </div>
+    <p class="note">Дохідність цільова, не гарантована. Мінімум для 50/50 — сума, кратна 3 авто (~$45 000). Орієнтовна ціна авто ~$15 000.</p>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Як це працює</div>
+      <h2>Чотири прості кроки</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="no">1</div><h4>Ви інвестуєте</h4><p>Обираєте формат — фіксований % або 50/50. Підписуємо договір.</p></div>
+      <div class="step"><div class="no">2</div><h4>Купуємо авто</h4><p>За ваші кошти купуємо авто, ліцензуємо й ставимо в парк на Uklon.</p></div>
+      <div class="step"><div class="no">3</div><h4>Авто заробляє</h4><p>Водії працюють, ми обслуговуємо. Максимальне завантаження — наша задача.</p></div>
+      <div class="step"><div class="no">4</div><h4>Ви отримуєте</h4><p>Виплата з 10 по 15 число щомісяця на ваш рахунок у гривні.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap why">
+    <div>
+      <div class="eyebrow">Ризики — на нас</div>
+      <h2 style="font-size:clamp(28px,4vw,42px);font-weight:800;margin:14px 0 24px">Ваш дохід захищено бізнесом, а не обіцянками</h2>
+      <ul>
+        <li><span class="ic">✓</span><div><b>Авто на компанії</b> — з можливістю нотаріальної застави на вас.</div></li>
+        <li><span class="ic">✓</span><div><b>Ліцензування, обслуговування, ремонт</b> і капремонт (двигун, АКПП) — коштом компанії.</div></li>
+        <li><span class="ic">✓</span><div><b>Максимальне завантаження</b> кожного авто — наша відповідальність.</div></li>
+        <li><span class="ic">✓</span><div><b>Вихід за ринковою вартістю</b> авто. Курсовий ризик ділимо 50/50.</div></li>
+        <li><span class="ic">✓</span><div><b>За 4 роки війни</b> не втрачено жодного авто.</div></li>
+      </ul>
+    </div>
+    <div class="whyimg"><img src="img/img_5273.jpg" alt="Преміум авто DriveMe"></div>
+  </div>
+</section>
+
+<!-- FLEET -->
+<section id="fleet" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Автопарк</div>
+      <h2>Реальні авто. Реальний бізнес.</h2>
+      <p>Не рендери й не стокові фото — наші робочі авто на Uklon.</p>
+    </div>
+    <div class="gal">
+      <figure class="big"><img src="img/img_2961.jpg" alt="Автопарк DriveMe"></figure>
+      <figure><img src="img/img_2967.jpg" alt="Uklon авто"></figure>
+      <figure><img src="img/img_2971.jpg" alt="Uklon авто"></figure>
+      <figure class="wide"><img src="img/img_2968.jpg" alt="Автопарк"></figure>
+      <figure><img src="img/img_2964.jpg" alt="Uklon авто"></figure>
+      <figure><img src="img/img_2970.jpg" alt="Автопарк"></figure>
+      <figure class="wide"><img src="img/img_5271.jpg" alt="Преміум авто"></figure>
+      <figure><img src="img/img_2965.jpg" alt="Mercedes DriveMe"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="wrap">
+    <div class="proof">
+      <div class="proof-top">
+        <div>
+          <div class="eyebrow">Реальні виплати</div>
+          <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;margin-top:12px">Ми вже платимо. Щомісяця.</h2>
+        </div>
+        <div style="text-align:right">
+          <div class="proof-big">1,77 млн ₴</div>
+          <div style="color:var(--mut);font-size:14px">виплачено інвесторам за 10 місяців · 0 затримок</div>
+        </div>
+      </div>
+      <table class="paytable">
+        <tr><td>Інвестор вклав $38 732 · 14% у $</td><td>19 248 ₴ / міс</td></tr>
+        <tr><td>Інвестор — 8 авто в парку</td><td>59 360 ₴ / міс</td></tr>
+        <tr><td>Інвестор — 7 авто в парку</td><td>39 600 ₴ / міс</td></tr>
+        <tr><td>Інвестор вклав $25 869 · 14% у $</td><td>12 856 ₴ / міс</td></tr>
+        <tr><td>Інвестор вклав $5 000 · 12% у $</td><td>2 242 ₴ / міс</td></tr>
+      </table>
+      <p class="note">Імена приховані для конфіденційності. Суми — фактичні, за червень 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Команда</div>
+      <h2>Реальні люди з іменами</h2>
+      <p>Ми не ховаємося за лендінгом. Ось хто відповідає за ваш капітал.</p>
+    </div>
+    <div class="team">
+      <div class="member">
+        <div class="ph"><img src="img/roman.jpg" alt="Роман Маслов" onerror="this.style.display='none';this.parentNode.querySelector('.ph-ph').style.display='block'"><span class="ph-ph" style="display:none">RM</span></div>
+        <div class="bd">
+          <h3>Роман Маслов</h3>
+          <div class="role">Засновник · підприємець, інвестор, IRONMAN</div>
+          <p>Засновник DriveMe (партнер Uklon з 2018), DriveMe Auto, Voyage Rent (Іспанія) та CarAmigo. Будує бізнеси в Україні та Валенсії. Публічна особа — усе відкрито.</p>
+          <div class="socials">
+            <a href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener">▶ YouTube</a>
+            <a href="https://www.instagram.com/maslovich/" target="_blank" rel="noopener">◎ Instagram</a>
+            <a href="https://maslov.com.ua" target="_blank" rel="noopener">🌐 maslov.com.ua</a>
+          </div>
+        </div>
+      </div>
+      <div class="member">
+        <div class="ph"><span class="ph-ph">БШ</span></div>
+        <div class="bd">
+          <h3>Богдан Шаповал</h3>
+          <div class="role">Керівник інвестиційного напрямку</div>
+          <p>Веде роботу з інвесторами: розрахунки, договори, звітність і виплати. Відповість на всі питання й порахує саме ваш кейс.</p>
+          <div class="socials">
+            <a href="tel:+34657057913">📞 +34 657 057 913</a>
+            <a href="https://t.me/maslov_capital" target="_blank" rel="noopener">✈ Telegram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-band">
+      <div class="eyebrow" style="justify-content:center">Залишилось 8 місць за акцією</div>
+      <h2>Почнемо з розмови, а не з грошей</h2>
+      <p>Покажемо парк, договір і реальні звіти — і ви вирішите. Жодного тиску.</p>
+      <div class="row">
+        <a href="tel:+34657057913" class="btn">📞 +34 657 057 913</a>
+        <a href="https://t.me/maslov_capital" target="_blank" rel="noopener" class="btn ghost">Написати в Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="brand">
+      <span class="mark"><span class="d">D</span><span class="m">M</span></span>
+      <span class="txt"><span class="cap">CAPITAL</span><span class="nm">Drive<b>Me</b></span></span>
+    </a>
+    <p class="dis">DriveMe Capital · 2026. Дохідність цільова, не гарантована. Матеріал не є публічною пропозицією цінних паперів. Інвестиції передбачають ризики — рішення приймається інвестором.</p>
+    <div class="socials">
+      <a href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/maslovich/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://t.me/maslov_capital" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+</script>
+</body>
+</html>
