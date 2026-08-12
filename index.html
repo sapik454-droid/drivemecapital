@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DriveMe Capital — інвестиції в діючий таксі-бізнес</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230a0a0b'/%3E%3Ctext x='20' y='28' font-family='Arial' font-weight='bold' font-size='21' text-anchor='middle'%3E%3Ctspan fill='%23fff'%3ED%3C/tspan%3E%3Ctspan fill='%23f7931e'%3EM%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Інвестуйте у діючий таксі-парк DriveMe (партнер Uklon з 2018). Фіксований дохід у доларі 10–15% або 50/50 від прибутку. 350+ авто, виплати щомісяця.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -153,6 +154,39 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
   .navlinks{display:none}.navtoggle{display:block}
 }
 @media(max-width:560px){.steps{grid-template-columns:1fr}.gal .big{grid-column:span 2;grid-row:span 1}}
+
+/* SOCIAL */
+.navsoc{display:flex;gap:8px;align-items:center;margin-right:4px}
+.navsoc a{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--white);transition:border-color .2s,color .2s,transform .15s}
+.navsoc a:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}
+.navsoc svg,.soc svg{width:18px;height:18px}
+.soc{display:flex;gap:12px;flex-wrap:wrap}
+.soc a{display:inline-flex;align-items:center;gap:9px;font-family:var(--sora);font-weight:600;font-size:14px;color:var(--white);background:var(--panel2);border:1px solid var(--line);padding:11px 18px;border-radius:100px;transition:border-color .2s,transform .15s,color .2s}
+.soc a:hover{border-color:var(--orange);transform:translateY(-2px)}
+.soc a.ig:hover{color:#ff7a3d}.soc a.tg:hover{color:#37afe3}.soc a.yt:hover{color:#ff4d4d}
+
+/* FOUNDER */
+.founder{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:center}
+.f-photo{border-radius:22px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:linear-gradient(160deg,#1c1811,#0b0a09);display:flex;align-items:center;justify-content:center}
+.f-photo img{width:100%;height:100%;object-fit:cover}
+.f-photo .ph-ph{font-family:var(--sora);font-size:84px;font-weight:800;color:#2a241b}
+.f-txt h2{font-size:clamp(30px,4.4vw,50px);font-weight:800;margin:12px 0 4px}
+.f-txt .role{color:var(--orange);font-family:var(--sora);font-weight:600;font-size:15px;margin-bottom:20px}
+.f-txt p{font-size:16.5px;color:var(--body);margin-bottom:26px;max-width:54ch}
+
+/* ECOSYSTEM */
+.eco{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ecocard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;transition:transform .2s,border-color .2s;display:flex;flex-direction:column}
+.ecocard:hover{transform:translateY(-5px);border-color:var(--orange)}
+.ecocard.core{border-color:rgba(247,147,30,.45);background:linear-gradient(180deg,rgba(247,147,30,.07),var(--panel))}
+.ecocard .flag{font-family:var(--sora);font-weight:600;font-size:12.5px;color:var(--mut);letter-spacing:.06em}
+.ecocard h3{font-size:22px;margin:9px 0 3px}
+.ecocard .yr{font-size:13px;color:var(--orange);font-family:var(--sora);font-weight:600}
+.ecocard p{font-size:14px;color:var(--mut);margin:14px 0 16px;flex:1}
+.ecocard .lnk{font-family:var(--sora);font-weight:600;font-size:13.5px;color:var(--white);display:inline-flex;gap:6px;align-items:center}
+.ecocard .lnk:hover{color:var(--orange)}
+.ecocard .tagcore{font-size:11px;font-weight:700;color:var(--orange2);text-transform:uppercase;letter-spacing:.1em}
+@media(max-width:900px){.founder{grid-template-columns:1fr}.f-photo{aspect-ratio:16/11;max-height:420px}.eco{grid-template-columns:1fr}.navsoc{display:none}}
 </style>
 </head>
 <body>
@@ -165,9 +199,14 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
     </a>
     <div class="navlinks">
       <a href="#offer">Пропозиція</a>
-      <a href="#how">Як працює</a>
       <a href="#fleet">Автопарк</a>
-      <a href="#team">Команда</a>
+      <a href="#founder">Засновник</a>
+      <a href="#eco">Екосистема</a>
+      <div class="navsoc">
+        <a href="https://www.instagram.com/maslovich/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://t.me/maslov_capital" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 15.5l-.35 3.9c.5 0 .72-.22 1-.48l2.4-2.3 4.98 3.64c.9.5 1.56.24 1.8-.84l3.27-15.3c.32-1.35-.49-1.88-1.36-1.56L1.13 9.3C-.18 9.82-.16 10.56.9 10.88l5.05 1.57L18.6 5.1c.55-.36 1.05-.16.64.2z"/></svg></a>
+        <a href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+      </div>
       <a href="#contact" class="btn">Стати інвестором</a>
     </div>
     <button class="navtoggle" onclick="document.getElementById('contact').scrollIntoView()">☰</button>
@@ -329,39 +368,68 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
   </div>
 </section>
 
-<!-- TEAM -->
-<section id="team" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="wrap founder">
+    <div class="f-photo">
+      <img src="img/roman.jpg" alt="Роман Маслов" onerror="this.style.display='none';this.parentNode.querySelector('.ph-ph').style.display='flex'">
+      <span class="ph-ph" style="display:none;width:100%;height:100%;align-items:center;justify-content:center">RM</span>
+    </div>
+    <div class="f-txt">
+      <div class="eyebrow">Засновник</div>
+      <h2>Роман Маслов</h2>
+      <div class="role">Підприємець · інвестор · IRONMAN</div>
+      <p>За 8 років побудував екосистему з 5 бізнесів у двох країнах — від найбільшого напряму таксі в Україні до прокату авто в Іспанії. Публічна особа: усе відкрито, репутація на кону. Саме тому за капітал інвесторів відповідають реальні люди й реальні активи.</p>
+      <div class="soc">
+        <a class="ig" href="https://www.instagram.com/maslovich/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg> Instagram</a>
+        <a class="tg" href="https://t.me/maslov_capital" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 15.5l-.35 3.9c.5 0 .72-.22 1-.48l2.4-2.3 4.98 3.64c.9.5 1.56.24 1.8-.84l3.27-15.3c.32-1.35-.49-1.88-1.36-1.56L1.13 9.3C-.18 9.82-.16 10.56.9 10.88l5.05 1.57L18.6 5.1c.55-.36 1.05-.16.64.2z"/></svg> Telegram</a>
+        <a class="yt" href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg> YouTube</a>
+        <a href="https://maslov.com.ua" target="_blank" rel="noopener">🌐 maslov.com.ua</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section id="eco" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Команда</div>
-      <h2>Реальні люди з іменами</h2>
-      <p>Ми не ховаємося за лендінгом. Ось хто відповідає за ваш капітал.</p>
+      <div class="eyebrow">Екосистема</div>
+      <h2>5 компаній у двох країнах</h2>
+      <p>Ваш капітал заходить не в стартап, а в діючу групу бізнесів із реальним трек-рекордом.</p>
     </div>
-    <div class="team">
-      <div class="member">
-        <div class="ph"><img src="img/roman.jpg" alt="Роман Маслов" onerror="this.style.display='none';this.parentNode.querySelector('.ph-ph').style.display='block'"><span class="ph-ph" style="display:none">RM</span></div>
-        <div class="bd">
-          <h3>Роман Маслов</h3>
-          <div class="role">Засновник · підприємець, інвестор, IRONMAN</div>
-          <p>Засновник DriveMe (партнер Uklon з 2018), DriveMe Auto, Voyage Rent (Іспанія) та CarAmigo. Будує бізнеси в Україні та Валенсії. Публічна особа — усе відкрито.</p>
-          <div class="socials">
-            <a href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener">▶ YouTube</a>
-            <a href="https://www.instagram.com/maslovich/" target="_blank" rel="noopener">◎ Instagram</a>
-            <a href="https://maslov.com.ua" target="_blank" rel="noopener">🌐 maslov.com.ua</a>
-          </div>
-        </div>
+    <div class="eco">
+      <div class="ecocard core">
+        <div class="flag">🇺🇦 Україна · таксі</div>
+        <h3>DriveMe</h3><div class="yr">з 2018 · партнер Uklon</div>
+        <p>Найбільший напрям групи: 350+ авто, 600+ водіїв, 200 000+ поїздок на місяць. Саме сюди йдуть інвестиції.</p>
+        <span class="tagcore">← сюди інвестиції</span>
       </div>
-      <div class="member">
-        <div class="ph"><span class="ph-ph">БШ</span></div>
-        <div class="bd">
-          <h3>Богдан Шаповал</h3>
-          <div class="role">Керівник інвестиційного напрямку</div>
-          <p>Веде роботу з інвесторами: розрахунки, договори, звітність і виплати. Відповість на всі питання й порахує саме ваш кейс.</p>
-          <div class="socials">
-            <a href="tel:+34657057913">📞 +34 657 057 913</a>
-            <a href="https://t.me/maslov_capital" target="_blank" rel="noopener">✈ Telegram</a>
-          </div>
-        </div>
+      <div class="ecocard">
+        <div class="flag">🇺🇦 Україна · авторинок</div>
+        <h3>DriveMe Auto</h3><div class="yr">з 2020</div>
+        <p>Імпорт і продаж авто з Європи в Україну. Забезпечує парк якісними машинами за оптовими цінами.</p>
+      </div>
+      <div class="ecocard">
+        <div class="flag">🇪🇸 Іспанія · прокат</div>
+        <h3>Voyage Rent</h3><div class="yr">з 2024</div>
+        <p>Прокат авто на Costa Blanca — Alicante, Valencia, Torrevieja. Повне страхування й доставка до дверей.</p>
+        <a class="lnk" href="https://voyagerent.es" target="_blank" rel="noopener">voyagerent.es →</a>
+      </div>
+      <div class="ecocard">
+        <div class="flag">🇪🇸 Іспанія · авторинок</div>
+        <h3>CarAmigo</h3><div class="yr">з 2025</div>
+        <p>Продаж перевірених вживаних авто у Валенсії. Прозорий підбір і супровід угоди.</p>
+        <a class="lnk" href="https://www.caramigo.es" target="_blank" rel="noopener">caramigo.es →</a>
+      </div>
+      <div class="ecocard">
+        <div class="flag">🇪🇸 Іспанія · lifestyle</div>
+        <h3>Beauty-коворкінг</h3><div class="yr">запуск 2026</div>
+        <p>Преміальний beauty-коворкінг у Валенсії. Новий напрям групи в Іспанії.</p>
+      </div>
+      <div class="ecocard" style="border-style:dashed;justify-content:center">
+        <h3 style="color:var(--orange);font-size:34px">2 країни</h3>
+        <p style="flex:none;margin-top:8px">Диверсифікація й досвід, який неможливо підробити. Ваш дохід — частина цього масштабу.</p>
       </div>
     </div>
   </div>
@@ -373,10 +441,15 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
     <div class="cta-band">
       <div class="eyebrow" style="justify-content:center">Залишилось 8 місць за акцією</div>
       <h2>Почнемо з розмови, а не з грошей</h2>
-      <p>Покажемо парк, договір і реальні звіти — і ви вирішите. Жодного тиску.</p>
+      <p>Покажемо парк, договір і реальні звіти — і ви вирішите. Жодного тиску.<br><span style="color:var(--mut);font-size:14px">Ваш контакт: Богдан Шаповал — керівник інвестиційного напрямку</span></p>
       <div class="row">
         <a href="tel:+34657057913" class="btn">📞 +34 657 057 913</a>
         <a href="https://t.me/maslov_capital" target="_blank" rel="noopener" class="btn ghost">Написати в Telegram</a>
+      </div>
+      <div class="soc" style="justify-content:center;margin-top:28px">
+        <a class="ig" href="https://www.instagram.com/maslovich/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg> Instagram</a>
+        <a class="tg" href="https://t.me/maslov_capital" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 15.5l-.35 3.9c.5 0 .72-.22 1-.48l2.4-2.3 4.98 3.64c.9.5 1.56.24 1.8-.84l3.27-15.3c.32-1.35-.49-1.88-1.36-1.56L1.13 9.3C-.18 9.82-.16 10.56.9 10.88l5.05 1.57L18.6 5.1c.55-.36 1.05-.16.64.2z"/></svg> Telegram</a>
+        <a class="yt" href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg> YouTube</a>
       </div>
     </div>
   </div>
