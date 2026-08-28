@@ -187,6 +187,11 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
 .ecocard .lnk:hover{color:var(--orange)}
 .ecocard .tagcore{font-size:11px;font-weight:700;color:var(--orange2);text-transform:uppercase;letter-spacing:.1em}
 @media(max-width:900px){.founder{grid-template-columns:1fr}.f-photo{aspect-ratio:16/11;max-height:420px}.eco{grid-template-columns:1fr}.navsoc{display:none}}
+.svcgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.svcgrid figure{overflow:hidden;border-radius:16px;border:1px solid var(--line);aspect-ratio:3/2}
+.svcgrid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.svcgrid figure:hover img{transform:scale(1.05)}
+@media(max-width:700px){.svcgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -318,6 +323,23 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
       </ul>
     </div>
     <div class="whyimg"><img src="img/img_2966.jpg" alt="Преміум авто DriveMe"></div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section id="service" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Власний сервіс</div>
+      <h2>Ремонтуємо й обслуговуємо самі</h2>
+      <p>Кузовні роботи, механіка, розвал-сходження на 3D-стенді — усе на власному сервісі. Тому ремонт і обслуговування ваших авто — наша турбота, а не ваша.</p>
+    </div>
+    <div class="svcgrid">
+      <figure><img src="img/svc_grind.jpg" alt="Ремонт на власному сервісі DriveMe"></figure>
+      <figure><img src="img/svc_sand.jpg" alt="Кузовні роботи DriveMe"></figure>
+      <figure><img src="img/svc_align1.jpg" alt="Розвал-сходження 3D"></figure>
+      <figure><img src="img/svc_align2.jpg" alt="Діагностика на стенді"></figure>
+    </div>
   </div>
 </section>
 
