@@ -429,7 +429,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
         <div class="flag">🇺🇦 Україна · авторинок</div>
         <h3>DriveMe Auto</h3><div class="yr">з 2020</div>
         <p>Імпорт і продаж авто з Європи в Україну. Забезпечує парк якісними машинами за оптовими цінами.</p>
-        <a class="lnk" href="https://drive-me.com.ua" target="_blank" rel="noopener">drive-me.com.ua →</a>
+        <a class="lnk" href="https://auto.driveme.com.ua" target="_blank" rel="noopener">auto.driveme.com.ua →</a>
       </div>
       <div class="ecocard">
         <div class="flag">🇪🇸 Іспанія · прокат</div>
@@ -445,9 +445,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
       </div>
       <div class="ecocard">
         <div class="flag">🇪🇸 Іспанія · lifestyle</div>
-        <h3>Beauty-коворкінг</h3><div class="yr">запуск 2026</div>
-        <p>Преміальний beauty-коворкінг у Валенсії. Новий напрям групи в Іспанії.</p>
-        <a class="lnk" href="https://maslov.com.ua" target="_blank" rel="noopener">maslov.com.ua →</a>
+        <h3>Cielo Studios</h3><div class="yr">запуск 2026 · Валенсія</div>
+        <p>Преміальний beauty-коворкінг Cielo Studios у Валенсії. Новий lifestyle-напрям групи.</p>
+        <a class="lnk" href="https://www.instagram.com/cielostudios.vlc/" target="_blank" rel="noopener">Instagram →</a>
       </div>
       <div class="ecocard" style="border-style:dashed;justify-content:center">
         <h3 style="color:var(--orange);font-size:34px">2 країни</h3>
@@ -499,6 +499,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
 </script>
 <script>
   document.querySelectorAll('.tier, .split').forEach(function(el){el.style.cursor='pointer';el.setAttribute('title','Заповнити анкету інвестора');el.addEventListener('click',function(){window.open('https://forms.gle/taaKiU5aHknjKYHa6','_blank','noopener');});});
+</script>
+<script>
+  document.querySelectorAll('.ecocard').forEach(function(card){var a=card.querySelector('a[href]');if(a){card.style.cursor='pointer';card.addEventListener('click',function(e){if(!e.target.closest('a')){window.open(a.href,'_blank','noopener');}});}});
 </script>
 </body>
 </html>
