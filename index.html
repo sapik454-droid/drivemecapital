@@ -212,7 +212,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
         <a href="https://t.me/maslov_capital" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 15.5l-.35 3.9c.5 0 .72-.22 1-.48l2.4-2.3 4.98 3.64c.9.5 1.56.24 1.8-.84l3.27-15.3c.32-1.35-.49-1.88-1.36-1.56L1.13 9.3C-.18 9.82-.16 10.56.9 10.88l5.05 1.57L18.6 5.1c.55-.36 1.05-.16.64.2z"/></svg></a>
         <a href="https://www.youtube.com/@RomanMaslovES" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
       </div>
-      <a href="#contact" class="btn">Стати інвестором</a>
+      <a href="https://forms.gle/taaKiU5aHknjKYHa6" target="_blank" rel="noopener" class="btn">Стати інвестором</a>
     </div>
     <button class="navtoggle" onclick="document.getElementById('contact').scrollIntoView()">☰</button>
   </div>
@@ -496,6 +496,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
 <script>
   const nav=document.getElementById('nav');
   addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+</script>
+<script>
+  document.querySelectorAll('.tier, .split').forEach(function(el){el.style.cursor='pointer';el.setAttribute('title','Заповнити анкету інвестора');el.addEventListener('click',function(){window.open('https://forms.gle/taaKiU5aHknjKYHa6','_blank','noopener');});});
 </script>
 </body>
 </html>
